@@ -73,7 +73,7 @@ const LogWorkedHoursForm: FC = () => {
         return 'Saving...';
         break;
       case FormStatuses.saved:
-        return 'Saved';
+        return 'Saved ✅';
         break;
       default:
         return 'Save';
