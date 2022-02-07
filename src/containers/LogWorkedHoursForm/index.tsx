@@ -18,11 +18,9 @@ const LogWorkedHoursForm: FC = () => {
   const [selectedDate, setSelectedDate] = useState<WorkingDay>(moment());
   const [workingDays, setWorkingDays] = useState<WorkingDay[]>([]);
   const [values, setValues] = useState<{[key: string]: number}>({});
-
   const [formStatus, setFormStatus] = useState<FormStatuses>(FormStatuses.unchanged);
 
   const { getLoggedHours, submit } = useLogWorkingHours();
-
 
   const handleSelectDate: WorkedHoursChangeHandler = (e) => {
     e.preventDefault();
@@ -43,7 +41,6 @@ const LogWorkedHoursForm: FC = () => {
     setValues((prevValues) => ({ ...prevValues, [name]: parseInt(e.target.value, 10) }));
     setFormStatus(FormStatuses.changed);
   }
-
 
   useEffect(() => {
     if (selectedDate) {
@@ -81,8 +78,6 @@ const LogWorkedHoursForm: FC = () => {
     }
   }, [formStatus]);
 
-const selectWorkWeekInputName = 'selectedWorkWeek';
-
   return (
     <main className='flex flex-col'>
       <div className='mx-auto my-4'>
@@ -119,9 +114,9 @@ const selectWorkWeekInputName = 'selectedWorkWeek';
               className='mx-auto my-6 bg-green-300 hover:bg-green-400 px-4 py-2 rounded-lg transition-all w-full md:w-32 disabled:opacity-70 disabled:hover:bg-green-300 disabled:cursor-not-allowed'
               disabled={formStatus !== FormStatuses.changed}
             >
-                {
-                  formButtonText
-                }
+              {
+                formButtonText
+              }
             </button>
           </form>
         )

@@ -60,9 +60,7 @@ const fetchUsername = async (): Promise<{ username: string, source: UsernameFetc
   }
 }
 
-
 // TODO: This state can be extracted to a global state using a state management tool like Context, Redux, RecoilJS, etc.
-
 /**
  * A hook that fetches the username and its source from the API or from the IndexedDB.
  * @returns {UserDataState} 
@@ -83,7 +81,7 @@ export const useUserData = (): UserDataState => {
         ...prevUserData,
         loading: true,
       }));
-      
+
       fetchUsername()
         .then(({ username, source }) => {
           setUserData((prevUserData) => ({

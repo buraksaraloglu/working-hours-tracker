@@ -1,7 +1,6 @@
 import { useCallback } from 'react';
 import { getMany, setMany } from 'idb-keyval';
 
-
 import { WorkingDay } from '../shared/utils';
 import { useUserData } from './useUserData';
 
@@ -17,7 +16,6 @@ type LogWorkingHours = {
 export const useLogWorkingHours = (): LogWorkingHours => {
   const { data } = useUserData();
   const { username } = data;
-
 
   const getLoggedHours = useCallback(async (dates: WorkingDay[]): Promise<string[]> => {
     if (!username) return [];
