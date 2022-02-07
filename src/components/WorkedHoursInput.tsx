@@ -11,7 +11,7 @@ export const WorkedHoursInput: FC<{
   const name = date.toISOString();
 
   return (
-    <div className='flex flex-col mx-2'>
+    <div className='flex flex-col my-1 md:mx-2'>
       <label htmlFor={name}>
         {date.format('ddd - MM.DD.')}
       </label>
@@ -24,7 +24,7 @@ export const WorkedHoursInput: FC<{
           value={value}
           onChange={onChange}
           placeholder='Hours'
-          className='max-w-xs w-24 rounded-lg border-2 border-gray-300 px-2 py-1'
+          className='max-w-xs w-full md:w-24 rounded-lg border-2 border-gray-300 px-2 py-1'
         />
         <p className='ml-2'>hours</p>
       </div>

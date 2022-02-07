@@ -10,12 +10,12 @@
     "test": "jest",
     "lint": "eslint src",
     "lint-fix": "eslint src --quiet --fix",
-    "validate": "npm run lint && npm run test && npm run build",
+    "validate": "npm run lint && npm run build",
     "setup": "npm install && npm run validate"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run test"
+      "pre-commit": "npm run lint"
     }
   },
   "dependencies": {
@@ -31,7 +31,7 @@
     "@typescript-eslint/parser": "^5.10.2",
     "@vitejs/plugin-react": "^1.0.7",
     "autoprefixer": "^10.4.2",
-    "eslint": "^8.8.0",
+    "eslint": "^7.2.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-typescript": "^2.5.0",

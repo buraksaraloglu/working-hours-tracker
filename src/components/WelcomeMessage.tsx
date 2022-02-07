@@ -2,11 +2,10 @@ import { FC } from 'react';
 import { UsernameFetchSource, useUserData } from '../hooks/useUserData';
 
 const getWelcomeMessage = (username: string, source: UsernameFetchSource): string => {
-  if (source === UsernameFetchSource.indexedDb) {
-    return `Welcome back ${username}!`;
-  }
-
-  return `Welcome ${username}!`;
+  const welcomeMessage = source === UsernameFetchSource.indexedDb 
+    ? 'Welcome back'
+    : 'Welcome';
+  return `${welcomeMessage} @${username}!`;
 }
 
 export const WelcomeMessageText: FC = () => {
@@ -18,7 +17,7 @@ export const WelcomeMessageText: FC = () => {
   }
 
   return (
-    <div className="font-serif font-semibold text-xl">
+    <div className="font-serif font-semibold text-xl text-center">
       <h1>
         {
           loading ? 'Loading...' : getWelcomeMessage(username, source)

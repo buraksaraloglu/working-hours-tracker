@@ -39,7 +39,10 @@ export const useLogWorkingHours = (): LogWorkingHours => {
 
     await setMany(Object.entries(hashedValues))
 
-    console.log('---> Request body to send to the server:', { data: hashedValues });
+    console.log('---> Request body to send to the server:', { data: {
+      username,
+      values, // Sending values as { [key: date]: value } format to format them correctly on the server.
+    } });
   }, [username]);
 
   return {

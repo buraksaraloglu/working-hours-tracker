@@ -92,7 +92,7 @@ const LogWorkedHoursForm: FC = () => {
             name='selectedWorkWeek'
             value={selectedDate.format('yyyy-MM-DD')}
             onChange={handleSelectDate}
-            className='max-w-xs rounded-lg border-2 border-gray-300 p-2 ml-2'
+            className='max-w-xs rounded-lg border-2 border-gray-300 p-2 w-full'
           />
         </section>
       </div>
@@ -100,7 +100,7 @@ const LogWorkedHoursForm: FC = () => {
       {workingDays.length 
         ? (
           <form onSubmit={handleSubmit} className='flex flex-col'>
-            <div className='flex mx-auto justify-center'>
+            <div className='flex mx-auto w-full justify-center flex-col md:flex-row'>
               {
                 workingDays.map((day) => {
                   const isoDay = day.toISOString();
@@ -113,7 +113,7 @@ const LogWorkedHoursForm: FC = () => {
 
             <button
               type='submit'
-              className='mx-auto my-6 bg-green-300 hover:bg-green-400 px-4 py-2 rounded-lg transition-all disabled:opacity-70 disabled:hover:bg-green-300 disabled:cursor-not-allowed'
+              className='mx-auto my-6 bg-green-300 hover:bg-green-400 px-4 py-2 rounded-lg transition-all w-full md:w-32 disabled:opacity-70 disabled:hover:bg-green-300 disabled:cursor-not-allowed'
               disabled={formStatus !== FormStatuses.changed}
             >
                 {
