@@ -1,13 +1,13 @@
 # Working Hours
 
-This project allows users to log their working hours to browsers IndexedDB (or to any database for persistance).
+This project allows users to log their working hours to browsers IndexedDB (or to any database for persistence).
 
 
 ## Key Concepts
 
 - Extracts the business days from a selected date.
 - Create multiple inputs according to business dates.
-- Stores the date in the IndexedDB for data persistance.
+- Stores the date in the IndexedDB for data persistence.
 
   
 ## How to run on your local machine
