@@ -40,7 +40,7 @@ Run the project
 
 *if you are using npm:*
 ```bash
-  npm run start
+  npm run dev
 ```
 
 *if you are using yarn:*
