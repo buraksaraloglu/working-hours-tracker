@@ -81,19 +81,22 @@ const LogWorkedHoursForm: FC = () => {
     }
   }, [formStatus]);
 
+const selectWorkWeekInputName = 'selectedWorkWeek';
+
   return (
     <main className='flex flex-col'>
       <div className='mx-auto my-4'>
         <h2 className='text-lg'>Please enter the hours you worked below</h2>
         <section className='mx-auto my-4'>
-          Select a date:
-          <input
-            type='date'
-            name='selectedWorkWeek'
-            value={selectedDate.format('yyyy-MM-DD')}
-            onChange={handleSelectDate}
-            className='max-w-xs rounded-lg border-2 border-gray-300 p-2 w-full'
-          />
+          <label htmlFor='selectedWorkWeek'>Select a date:
+            <input
+              type='date'
+              name='selectedWorkWeek'
+              value={selectedDate.format('yyyy-MM-DD')}
+              onChange={handleSelectDate}
+              className='max-w-xs rounded-lg border-2 border-gray-300 p-2 w-full'
+            />
+          </label>
         </section>
       </div>
 
