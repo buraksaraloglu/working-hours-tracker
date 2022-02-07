@@ -84,7 +84,7 @@ const LogWorkedHoursForm: FC = () => {
   return (
     <main className='flex flex-col'>
       <div className='mx-auto my-4'>
-        <h2 className='text-lg'>Please enter enter the hours you worked below</h2>
+        <h2 className='text-lg'>Please enter the hours you worked below</h2>
         <section className='mx-auto my-4'>
           Select a date:
           <input
